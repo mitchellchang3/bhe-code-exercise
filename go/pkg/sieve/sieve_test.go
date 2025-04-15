@@ -17,8 +17,9 @@ func TestNthPrime(t *testing.T) {
 	assert.Equal(t, int64(7793), sieve.NthPrime(986))
 	assert.Equal(t, int64(17393), sieve.NthPrime(2000))
 	assert.Equal(t, int64(15485867), sieve.NthPrime(1000000))
-	assert.Equal(t, int64(179424691), sieve.NthPrime(10000000))
-	//assert.Equal(t, int64(2038074751), sieve.NthPrime(100000000)) not required, just a fun challenge
+	assert.Equal(t, int64(179424691), sieve.NthPrime(10000000)) // Takes around 30 seconds
+
+	// assert.Equal(t, int64(2038074751), sieve.NthPrime(100000000)) not required, just a fun challenge <- My code passes but it takes around 9 minutes to run so I decided to leave it commented out. Feel free to try it at your own risk!
 }
 
 func FuzzNthPrime(f *testing.F) {
